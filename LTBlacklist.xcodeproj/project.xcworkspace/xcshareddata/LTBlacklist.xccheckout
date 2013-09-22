@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>073ECFB7-0060-4D98-BC9F-417580657358</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LTBlacklist</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D2306B73-B23E-4EA0-B5EF-E7778886BD63</key>
+		<string>https://github.com/lexrus/LTBlacklist.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LTBlacklist.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D2306B73-B23E-4EA0-B5EF-E7778886BD63</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lexrus/LTBlacklist.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D2306B73-B23E-4EA0-B5EF-E7778886BD63</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D2306B73-B23E-4EA0-B5EF-E7778886BD63</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LTBlacklist</string>
+		</dict>
+	</array>
+</dict>
+</plist>
