@@ -10,7 +10,7 @@ The missing Blacklist app for your iOS 5/6+. No Jailbreak Required!
 # License
 * This code is distributed under the terms and conditions of the MIT license.
 
-# Third party code
+# Third part code
 * [MMPDeepSleepPreventer](https://github.com/marcop/MMPDeepSleepPreventer)
 * [WCAlertView](https://github.com/m1entus/WCAlertView)
 * [MCSwipeTableviewCell](https://github.com/alikaragoz/MCSwipeTableViewCell)
