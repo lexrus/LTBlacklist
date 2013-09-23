@@ -53,14 +53,21 @@ static const float kSegmentedControlMargin = 10.0f;
     _tableView.rowHeight = kBlacklistCellHeight;
     _tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:1.0f];
     [self.view addSubview:_tableView];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
     [_tableView reloadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    _tableView.delegate = nil;
+    _tableView.dataSource = nil;
 }
 
 - (void)didReceiveMemoryWarning

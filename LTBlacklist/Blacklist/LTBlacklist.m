@@ -8,7 +8,6 @@
 
 #import "LTBlacklist.h"
 #import <CoreTelephony/CTCall.h>
-#import "MMPDeepSleepPreventer.h"
 
 #define kBlockedPhoneNumbersCacheKey @"blockedPhoneNumbers"
 
@@ -36,10 +35,6 @@ extern void CTTelephonyCenterRemoveObserver(CFNotificationCenterRef center,
 
 @property (strong, nonatomic) NSCache *cache;
 @property (copy, nonatomic, readonly) NSString *path;
-
-- (void)playPreventSleepSound;
-- (void)startPreventSleep;
-- (void)stopPreventSleep;
 
 @end
 
@@ -87,17 +82,31 @@ static void callHandler(CFNotificationCenterRef center, void *observer,
     if (status == kCTCallStatusCallIn) {
         LTPhoneNumber *phoneNumber = (LTPhoneNumber *)CTCallCopyAddress(NULL, call);
         
-        NSLog(@"Incomming phone call: %@", phoneNumber);
+        NSLog(@"Call in: %@", phoneNumber);
         
-        [[LTBlacklist shared] addItem:phoneNumber];
-        
-        LTBlacklistItem *existingItem = [[LTBlacklist shared] itemByPhoneNumber:phoneNumber];
-        if (existingItem && existingItem.blocked) {
-            existingItem.blockedCount++;
-            [[LTBlacklist shared] updateBlockedItem:existingItem];
-            CTCallDisconnect(call);
+        LTBlacklistItem *item = [[LTBlacklist shared] itemByPhoneNumber:phoneNumber];
+        if (item) {
+            if (item.blocked) {
+                item.blockedCount++;
+                CTCallDisconnect(call);
+            }
+            
+            [[LTBlacklist shared] updateBlockedItem:item];
+            [[LTBlacklist shared] notify:phoneNumber];
+        } else {
+            [[LTBlacklist shared] addItem:phoneNumber];
         }
     }
+}
+
+- (void)notify:(LTPhoneNumber*)phoneNumber
+{
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    notification.fireDate = [[NSDate date] dateByAddingTimeInterval:1.5f];
+    notification.alertBody = [NSString stringWithFormat:@"Blocked %@", phoneNumber];
+    notification.alertAction = NSLocalizedString(@"Show LTBlacklist", nil);
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 - (void)activate {
@@ -108,7 +117,6 @@ static void callHandler(CFNotificationCenterRef center, void *observer,
                                  NULL,
                                  CFNotificationSuspensionBehaviorHold
                                  );
-    [[[MMPDeepSleepPreventer alloc] init] startPreventSleep];
 }
 
 - (void)deactivate {
@@ -176,8 +184,9 @@ static void callHandler(CFNotificationCenterRef center, void *observer,
 
 - (LTBlacklistItem*)itemByPhoneNumber:(LTPhoneNumber*)phoneNumber
 {
+    if (!phoneNumber) return nil;
     for (LTBlacklistItem *item in self.blockedItems) {
-        if ([item.phoneNumber isEqualToString:phoneNumber]) {
+        if ([phoneNumber rangeOfString:item.phoneNumber].location != NSNotFound) {
             return item;
         }
     }

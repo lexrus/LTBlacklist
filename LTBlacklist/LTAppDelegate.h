@@ -12,4 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (assign, nonatomic) UIBackgroundTaskIdentifier bgTask;
+@property (assign, nonatomic) BOOL background;
+@property (strong, nonatomic) dispatch_block_t expirationHandler;
+@property (assign, nonatomic) BOOL jobExpired;
+
+
 @end

@@ -39,7 +39,6 @@
 	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>audio</string>
 		<string>voip</string>
 	</array>
 	<key>UIPrerenderedIcon</key>

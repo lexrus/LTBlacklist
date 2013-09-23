@@ -22,13 +22,10 @@
 		D78D3470177B202F002007AE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78D346F177B202F002007AE /* Default@2x.png */; };
 		D78D3472177B202F002007AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78D3471177B202F002007AE /* Default-568h@2x.png */; };
 		D7A0D36E17EEE7AE0004BB99 /* MCSwipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D36D17EEE7AE0004BB99 /* MCSwipeTableViewCell.m */; };
-		D7A0D37217EF2E7A0004BB99 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A0D37117EF2E7A0004BB99 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D7A0D37417EF2EE90004BB99 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A0D37317EF2EE90004BB99 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D7A0D37C17EF37E80004BB99 /* WCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D37B17EF37E80004BB99 /* WCAlertView.m */; };
 		D7A0D37E17EF44660004BB99 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A0D37D17EF44660004BB99 /* AVFoundation.framework */; };
 		D7A0D38317EF47C60004BB99 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A0D38217EF47C60004BB99 /* AudioToolbox.framework */; };
-		D7A0D38C17EF50B00004BB99 /* MMPDeepSleepPreventer.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D38817EF50AF0004BB99 /* MMPDeepSleepPreventer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D7A0D38D17EF50B00004BB99 /* MMPSilence.wav in Resources */ = {isa = PBXBuildFile; fileRef = D7A0D38917EF50AF0004BB99 /* MMPSilence.wav */; };
 		D7CBE1C71790440100C6A0D4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CBE1C61790440100C6A0D4 /* CoreTelephony.framework */; };
 		D7CBE1CE1790465800C6A0D4 /* LTBlacklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CBE1CD1790465800C6A0D4 /* LTBlacklistViewController.m */; };
 		D7CBE1DD1790564B00C6A0D4 /* LTBlacklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CBE1DC1790564B00C6A0D4 /* LTBlacklistItem.m */; };
@@ -66,9 +63,6 @@
 		D7A0D37B17EF37E80004BB99 /* WCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAlertView.m; sourceTree = "<group>"; };
 		D7A0D37D17EF44660004BB99 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D7A0D38217EF47C60004BB99 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		D7A0D38717EF50AF0004BB99 /* MMPDeepSleepPreventer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPDeepSleepPreventer.h; sourceTree = "<group>"; };
-		D7A0D38817EF50AF0004BB99 /* MMPDeepSleepPreventer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPDeepSleepPreventer.m; sourceTree = "<group>"; };
-		D7A0D38917EF50AF0004BB99 /* MMPSilence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MMPSilence.wav; sourceTree = "<group>"; };
 		D7CBE1C61790440100C6A0D4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D7CBE1C81790441700C6A0D4 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D7CBE1CC1790465700C6A0D4 /* LTBlacklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTBlacklistViewController.h; sourceTree = "<group>"; };
@@ -87,7 +81,6 @@
 				D7A0D38317EF47C60004BB99 /* AudioToolbox.framework in Frameworks */,
 				D7A0D37E17EF44660004BB99 /* AVFoundation.framework in Frameworks */,
 				D7A0D37417EF2EE90004BB99 /* QuartzCore.framework in Frameworks */,
-				D7A0D37217EF2E7A0004BB99 /* CFNetwork.framework in Frameworks */,
 				D78D3460177B202F002007AE /* CoreGraphics.framework in Frameworks */,
 				D7CBE1C71790440100C6A0D4 /* CoreTelephony.framework in Frameworks */,
 				D78D345E177B202F002007AE /* Foundation.framework in Frameworks */,
@@ -101,7 +94,6 @@
 		D7577622179D0B3C00538D2C /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				D7A0D38417EF50AF0004BB99 /* MMPDeepSleepPreventer */,
 				D7A0D37917EF37E80004BB99 /* WCAlertView */,
 				D7A0D36B17EEE7AE0004BB99 /* MCSwipeTableViewCell */,
 				D7577623179D0B3C00538D2C /* ObjectiveCGenerics.h */,
@@ -198,16 +190,6 @@
 			path = WCAlertView;
 			sourceTree = "<group>";
 		};
-		D7A0D38417EF50AF0004BB99 /* MMPDeepSleepPreventer */ = {
-			isa = PBXGroup;
-			children = (
-				D7A0D38717EF50AF0004BB99 /* MMPDeepSleepPreventer.h */,
-				D7A0D38817EF50AF0004BB99 /* MMPDeepSleepPreventer.m */,
-				D7A0D38917EF50AF0004BB99 /* MMPSilence.wav */,
-			);
-			path = MMPDeepSleepPreventer;
-			sourceTree = "<group>";
-		};
 		D7CBE1CB1790464A00C6A0D4 /* Blacklist */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +236,15 @@
 				CLASSPREFIX = LT;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = LexTang.com;
+				TargetAttributes = {
+					D78D3457177B202F002007AE = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = D78D3453177B202F002007AE /* Build configuration list for PBXProject "LTBlacklist" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -286,7 +277,6 @@
 				D70C8E6B17CCF637006E3D38 /* Icon.png in Resources */,
 				D70C8E6917CCF62B006E3D38 /* Icon@2x.png in Resources */,
 				D757764B17A0FBA500538D2C /* UnblockIcon@2x.png in Resources */,
-				D7A0D38D17EF50B00004BB99 /* MMPSilence.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +295,6 @@
 				D7A0D36E17EEE7AE0004BB99 /* MCSwipeTableViewCell.m in Sources */,
 				D7CBE1CE1790465800C6A0D4 /* LTBlacklistViewController.m in Sources */,
 				D721238717A7B80D007D9CD7 /* LTPhoneNumber.m in Sources */,
-				D7A0D38C17EF50B00004BB99 /* MMPDeepSleepPreventer.m in Sources */,
 				D78D3468177B202F002007AE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,19 +363,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: SHENGGANG TANG (929PMK8K46)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SHENGGANG TANG (929PMK8K46)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTBlacklist/LTBlacklist-Prefix.pch";
 				INFOPLIST_FILE = "LTBlacklist/LTBlacklist-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Reveal,
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "DA721D82-FEAC-4529-A8C7-37D8C95D0EB9";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DA721D82-FEAC-4529-A8C7-37D8C95D0EB9";
@@ -397,10 +379,7 @@
 		D78D3477177B202F002007AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTBlacklist/LTBlacklist-Prefix.pch";
 				INFOPLIST_FILE = "LTBlacklist/LTBlacklist-Info.plist";

@@ -50,8 +50,11 @@ NSString * const kBlacklistCellIdentifier = @"kBlacklistCellIdentifier";
 {
     _item = item;
     self.textLabel.font = [UIFont systemFontOfSize:16];
-    self.textLabel.text = [NSString stringWithFormat:@"%@ %@", _item.title, _item.phoneNumber];
-    self.detailTextLabel.text = self.item.phoneNumber.description;
+    if (_item.blockedCount <= 1) {
+        self.textLabel.text = _item.phoneNumber;
+    } else {
+        self.textLabel.text = [NSString stringWithFormat:@"%@ x %i", _item.phoneNumber, _item.blockedCount];
+    }
     self.blocked = _item.blocked;
 }
 
