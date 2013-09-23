@@ -3,9 +3,6 @@ The missing Blacklist app for your iOS 5/6+. No Jailbreak Required!
 
 ![Hero](https://f.cloud.github.com/assets/219689/1192769/2d2d072e-2467-11e3-89cd-2d257b2255ed.jpg)
 
-# TODO
-* Set a [MacBuildServer](http://try.macbuildserver.com) build
-
 # Credits
 LTBlacklist was created by [Lex Tang](http://lextang.com/)
 
