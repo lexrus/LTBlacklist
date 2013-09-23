@@ -1,13 +1,13 @@
 # LTBlacklist
 The missing Blacklist app for your iOS 5/6+. No Jailbreak Required!
 
-![Hero](https://f.cloud.github.com/assets/219689/1192587/8c1c0c60-2464-11e3-9bae-8e7c4584e609.jpg)
+![Hero](https://f.cloud.github.com/assets/219689/1192769/2d2d072e-2467-11e3-89cd-2d257b2255ed.jpg)
 
 # TODO
 * Set a [MacBuildServer](http://try.macbuildserver.com) build
 
 # Credits
-LTBlakclist was created by [Lex Tang](http://lextang.com/)
+LTBlacklist was created by [Lex Tang](http://lextang.com/)
 
 # License
 * This code is distributed under the terms and conditions of the MIT license.
